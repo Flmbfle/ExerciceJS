@@ -54,14 +54,14 @@ switch (op)
 
     default:
         alert("Opérateur erroné")
+        if (nb2=0) {
+    
+        } else if (op="/")then
+            alert("impossible")
 
   } 
-/*J'arrive pas a affecter le message d'erreur pour la division de 0
-  if (nb2=0) {
-    
-  } else if (op="/"){
-      alert("impossible")
-  }
-  */
+
+  
+  
 
 
