@@ -21,3 +21,47 @@ if(age < 18)
 {    
     alert("Vous êtes Majeur");
 }
+
+/*Calculette*/
+var nb = window.prompt("Saisissez un nombre entier");
+var op =window.prompt("Saisissez un opérateur "+"+ , - , * ou /");
+var nb2 = window.prompt("Saisissez un second nombre entier");
+
+var result;
+var erreur
+
+switch (op)
+{
+    case "+" :
+        result= +nb + +nb2;
+        alert(result)
+    break;
+
+    case "-" :
+        result= nb - nb2;
+        alert(result)
+    break;
+
+    case "*" :
+        result= nb * nb2;
+        alert(result)
+    break;
+
+    case "/" :
+        result= nb / nb2;
+        alert(result)
+    break;
+
+    default:
+        alert("Opérateur erroné")
+
+  } 
+/*J'arrive pas a affecter le message d'erreur pour la division de 0
+  if (nb2=0) {
+    
+  } else if (op="/"){
+      alert("impossible")
+  }
+  */
+
+
