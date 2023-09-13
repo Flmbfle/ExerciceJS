@@ -65,8 +65,8 @@ for (m = 0 ; m <= n ; m++){
 }
 
 /*Exercice 5*/ 
-var voyelles = "aeiouy";
-var nbvoyelles = 0;
+var voyelles = "aeiouy"; //Voyelles
+var nbvoyelles = 0;      //Initialisation du Nb de voyelles à 0
 var mot = window.prompt("Saisissez un mot");
 for (var i = 0 ; i < mot.length; i++) {
     if (voyelles.indexOf(mot.substring(i, i + 1)) != -1) {
