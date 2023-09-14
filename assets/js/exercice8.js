@@ -57,11 +57,11 @@ if (i > 3) { // Vérifier si au moins 1 note a été saisie pour éviter une div
 // Il est demandé de choisir la structure répétitive (for, while, do...while) la mieux appropriée au problème.
 var x =window.prompt("Saisissez un nombre");
 var n =window.prompt("Saisiseez un second nombre");
-var m = 0 ;
+var i = 0 ;
 
-for (m = 0 ; m <= n ; m++){
-    resultat = x * m;
-    alert(+m + "x" +x + "=" + resultat)
+for (i = 0 ; i <= n ; i++){
+    resultat = x * i;
+    alert(+i + "x" +x + "=" + resultat)
 }
 
 /*Exercice 5*/ 
