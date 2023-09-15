@@ -18,9 +18,9 @@ for (var i = 0; i < taille; i++) {
 }
 
  // Afficher le contenu du tableau sur la page HTML avec un saut de ligne entre chaque élément
- var resultatp = document.getElementById('resultat');
+ var resultatdiv = document.getElementById('resultat');
  for (var j = 0; j < tableau.length; j++) {
      var paragraphe = document.createElement('p');
-     paragraphe.textContent = "Élément n° " + (i + 1) + tableau[j];
+     paragraphe.textContent = tableau[j];
      resultatdiv.appendChild(paragraphe);
  }
