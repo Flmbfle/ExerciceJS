@@ -1,58 +1,78 @@
+console.log("Exercice 1 Saisie")
+var i = 0;
 
-//Exercice 1
+do
+{
+    i++
 
-var x = window.prompt("Saisissez une valeur pour x");
-var y = window.prompt("Saisissez une valeur pour y");
+    var prenom = window.prompt("Saisissez le prénom N°"+ i + " ou Clic sur Annuler pour arrêter la saisie.");
+}while(prenom!="")
 
-function cube(x , x , x){
-    return x * x * x;
+console.log("Exercice 2 - Entiers inférieurs à N")
+/*Ecrire un programme qui affiche les nombres inférieurs à N.*/
+var nb = window.prompt("Entrez un nombre");
+
+// Vérifie si nb est un nombre valide
+if (!isNaN(nb) && nb !== null) {
+    nb = parseInt(nb); // Convertit nb en un entier
+    for (var i = nb; i >= 0; i--) {
+        alert(i);
+    }
+} else {
+    alert("Vous n'avez pas saisi un nombre valide.");
 }
-var resultatcube = cube(x , x , x); // Appeler la fonction produit avec les valeurs x , x et x.
-var cube = document.getElementById('cube').innerHTML ="Le cube de " + x + " est égal à " + resultatcube
 
-function produit(x, y) {
-    return x * y;
+// Pour i de 0 à N
+//     ecrire i
+// FinPour
+
+/*Exercice 3 Moyenne*/
+// Ecrire un programme qui demande à l'utilisateur de saisir des entiers et en affiche la somme et la moyenne (on arrête la saisie avec la valeur 0).
+//
+i=1 
+var somme = 0;
+var saisie;
+var moyenne;
+
+do {
+    saisie = window.prompt("Entre la note  n°"+i +" (tapez 0 pour annuler)");
+    if (saisie === "0") {
+        break; // Sortir de la boucle si l'utilisateur tape "0"
+    }
+    if (saisie !== "") {
+        somme = somme + parseFloat(saisie);
+        i++;
+    }
+} while (true);
+
+if (i > 3) { // Vérifier si au moins 1 note a été saisie pour éviter une division par zéro
+    moyenne = somme / (i - 1);
+    alert("La somme vaut : " + somme + " La moyenne vaut : " + moyenne);
+} else {
+    alert("Aucune note valide saisie.");
 }
 
-var resultat = produit(x, y); // Appeler la fonction produit avec les valeurs x et y.
-var produit = document.getElementById('produit').innerHTML ="Le produit de " + x + " * " + y + " est égal à " + resultat
+/*Exercice 4 - Multiples*/
 
-function afficheImg(image){
-    var img = document.getElementById("papillon")
-    img.setAttribute ("src","assets/img/papillon.jpg")
+// Il est demandé de choisir la structure répétitive (for, while, do...while) la mieux appropriée au problème.
+var x =window.prompt("Saisissez un nombre");
+var n =window.prompt("Saisiseez un second nombre");
+var i = "" ;
+
+for (i = 0 ; i <= n ; i++){
+    resultat = x * i;
+    alert(+i + "x" +x + "=" + resultat)
 }
-afficheImg()
 
-//Exercice 2
-
-function strtok(str1, str2, n) {
-    // Divisez la chaîne str1 en une liste de mots en utilisant str2 comme séparateur.
-    var mots = str1.split(str2);
-
-    // Vérifiez si le nième mot existe dans la liste.
-    if (n - 1 >= 0 && n - 1 < mots.length) {
-        // Retournez le nième mot.
-        return mots[n-1];
-    } else {
-        // Si le nième mot n'existe pas, retournez une chaîne vide.
-        return "";
+/*Exercice 5*/ 
+var voyelles = "aeiouy"; //Voyelles
+var nbvoyelles = 0;      //Initialisation du Nb de voyelles à 0
+var mot = window.prompt("Saisissez un mot");
+for (var i = 0 ; i < mot.length; i++) {
+    if (voyelles.indexOf(mot.substring(i, i + 1)) != -1) {
+        nbvoyelles++;
     }
 }
+alert("Le mot " + mot + " contient " +nbvoyelles + " voyelles.");
 
-// Demandez à l'utilisateur d'entrer les valeurs des paramètres.
-var str1 = prompt("Entrez la chaîne str1 :");
-var str2 = prompt("Entrez le caractère de séparation str2 :");
-var n = parseInt(prompt("Entrez la valeur de n :"));
 
-// Appelez la fonction strtok avec les valeurs entrées par l'utilisateur.
-var resultat = strtok(str1, str2, n);
-
-// Récupérez l'élément HTML où vous voulez afficher le résultat.
-var textElement = document.getElementById("text");
-
-// Affichez le résultat.
-if (resultat !== "") {
-    textElement.innerHTML = "Le " + n + " ème mot est : " + resultat;
-} else {
-    textElement.innerHTML = "Le " + n + "ème mot(s) n'existe pas.";
-}

@@ -1,67 +1,17 @@
-/*Parité*/
-var a = window.prompt("Saisissez un nombre");
+/*Affiche la chaine de caractères 100*/
+var a = "100"
+alert("Ceci est une chaine de caractères : " + a);
 
-if(a%2 ==0) 
-{
-    alert(" Le nombre " + a + " est paire");
-} 
-else
-{
-    alert(" Le nombre " + a + " est impaire");
-}
+/*Elément de décrémentation*/
+var b = 100
+var x = 101
+alert(b = --x);
 
-/*Age*/
-var age =window.prompt("Saisissez votre année de naissance");
-age = 2023 - age;
+/*Ajout de la valeur c à la valeur de a*/
+var c = 1.00
+alert(+c + +a);
 
-if(age < 18)
-{
-    alert("Vous êtes Mineur");
-} else
-{    
-    alert("Vous êtes Majeur");
-}
-
-/*Calculette*/
-var nb = window.prompt("Saisissez un nombre entier");
-var op =window.prompt("Saisissez un opérateur "+"+ , - , * ou /");
-var nb2 = window.prompt("Saisissez un second nombre entier");
-
-var result;
-var erreur
-
-switch (op)
-{
-    case "+" :
-        result= +nb + +nb2;
-        alert(result)
-    break;
-
-    case "-" :
-        result= nb - nb2;
-        alert(result)
-    break;
-
-    case "*" :
-        result= nb * nb2;
-        alert(result)
-    break;
-
-    case "/" :
-        result= nb / nb2;
-        alert(result)
-    break;
-
-    default:
-        alert("Opérateur erroné")
-        if (nb2=0) {
-    
-        } else if (op="/")then
-            alert("impossible")
-
-  } 
-
-  
-  
-
+/*Inversion de la valeur de d*/
+var d = true
+alert(d=false);
 

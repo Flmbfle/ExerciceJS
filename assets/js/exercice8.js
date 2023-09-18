@@ -1,78 +1,67 @@
-console.log("Exercice 1 Saisie")
-var i = 0;
+/*Parité*/
+var a = window.prompt("Saisissez un nombre");
 
-do
+if(a%2 ==0) 
 {
-    i++
-
-    var prenom = window.prompt("Saisissez le prénom N°"+ i + " ou Clic sur Annuler pour arrêter la saisie.");
-}while(prenom!="")
-
-console.log("Exercice 2 - Entiers inférieurs à N")
-/*Ecrire un programme qui affiche les nombres inférieurs à N.*/
-var nb = window.prompt("Entrez un nombre");
-
-// Vérifie si nb est un nombre valide
-if (!isNaN(nb) && nb !== null) {
-    nb = parseInt(nb); // Convertit nb en un entier
-    for (var i = nb; i >= 0; i--) {
-        alert(i);
-    }
-} else {
-    alert("Vous n'avez pas saisi un nombre valide.");
+    alert(" Le nombre " + a + " est paire");
+} 
+else
+{
+    alert(" Le nombre " + a + " est impaire");
 }
 
-// Pour i de 0 à N
-//     ecrire i
-// FinPour
+/*Age*/
+var age =window.prompt("Saisissez votre année de naissance");
+age = 2023 - age;
 
-/*Exercice 3 Moyenne*/
-// Ecrire un programme qui demande à l'utilisateur de saisir des entiers et en affiche la somme et la moyenne (on arrête la saisie avec la valeur 0).
-//
-i=1 
-var somme = 0;
-var saisie;
-var moyenne;
-
-do {
-    saisie = window.prompt("Entre la note  n°"+i +" (tapez 0 pour annuler)");
-    if (saisie === "0") {
-        break; // Sortir de la boucle si l'utilisateur tape "0"
-    }
-    if (saisie !== "") {
-        somme = somme + parseFloat(saisie);
-        i++;
-    }
-} while (true);
-
-if (i > 3) { // Vérifier si au moins 1 note a été saisie pour éviter une division par zéro
-    moyenne = somme / (i - 1);
-    alert("La somme vaut : " + somme + " La moyenne vaut : " + moyenne);
-} else {
-    alert("Aucune note valide saisie.");
+if(age < 18)
+{
+    alert("Vous êtes Mineur");
+} else
+{    
+    alert("Vous êtes Majeur");
 }
 
-/*Exercice 4 - Multiples*/
+/*Calculette*/
+var nb = window.prompt("Saisissez un nombre entier");
+var op =window.prompt("Saisissez un opérateur "+"+ , - , * ou /");
+var nb2 = window.prompt("Saisissez un second nombre entier");
 
-// Il est demandé de choisir la structure répétitive (for, while, do...while) la mieux appropriée au problème.
-var x =window.prompt("Saisissez un nombre");
-var n =window.prompt("Saisiseez un second nombre");
-var i = "" ;
+var result;
+var erreur
 
-for (i = 0 ; i <= n ; i++){
-    resultat = x * i;
-    alert(+i + "x" +x + "=" + resultat)
-}
+switch (op)
+{
+    case "+" :
+        result= +nb + +nb2;
+        alert(result)
+    break;
 
-/*Exercice 5*/ 
-var voyelles = "aeiouy"; //Voyelles
-var nbvoyelles = 0;      //Initialisation du Nb de voyelles à 0
-var mot = window.prompt("Saisissez un mot");
-for (var i = 0 ; i < mot.length; i++) {
-    if (voyelles.indexOf(mot.substring(i, i + 1)) != -1) {
-        nbvoyelles++;
-    }
-}
-alert("Le mot " + mot + " contient " +nbvoyelles + " voyelles.");
+    case "-" :
+        result= nb - nb2;
+        alert(result)
+    break;
+
+    case "*" :
+        result= nb * nb2;
+        alert(result)
+    break;
+
+    case "/" :
+        result= nb / nb2;
+        alert(result)
+    break;
+
+    default:
+        alert("Opérateur erroné")
+        if (nb2=0) {
+    
+        } else if (op="/")then
+            alert("impossible")
+
+  } 
+
+  
+  
 
 
