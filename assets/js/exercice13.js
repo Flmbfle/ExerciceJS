@@ -1,70 +1,40 @@
-// Génère un nombre aléatoire entre 1 et 100 (modifiable selon vos besoins)
+// Initialisation du tableau
+var valeurs = [];
 
-var nombreMagique = Math.floor(Math.random() * 100) + 1;
+// Boucle de saisie
+while (true) {
+  var valeurSaisie = window.prompt("Saisissez une valeur numérique (ou 0 pour terminer) :");
+  var valeurNum = parseFloat(valeurSaisie); // Convertir en nombre
 
-// Fonction pour vérifier la saisie de l'utilisateur
-function verif() {
-    var saisie = document.getElementById("textBox1").value;
-    var label1 = document.getElementById("label1");
+      // Vérifier si l'utilisateur a entré 0 pour terminer
+  if (valeurNum === 0) {
+    break; // Sortir de la boucle
+  }
+  // Vérifier si la saisie est un nombre
+  if (!isNaN(valeurNum)) {
+    // Ajouter la valeur au tableau
+    valeurs.push(valeurNum);
 
-    //Vérifie si la saisie est vide
-    if (saisie === "") {
-        label1.textContent = "Veuillez entrer un nombre.";
-    } else {
-        //Convertit automatiquelent la saisie en un nomber entier
-        var nombreUtilisateur = parseInt(saisie);
 
-        if (isNaN(nombreUtilisateur)) {
-            label1.textContent = alert("Veuillez entrer un nombre valide.");
-        } else {
-            if (nombreUtilisateur === nombreMagique) {
-                label1.textContent = alert("Félicitations ! Vous avez deviné le nombre magique.");
-            } else if (nombreUtilisateur < nombreMagique) {
-                label1.textContent = alert("Trop petit. Essayez encore.");
-            } else {
-                label1.textContent = alert("Trop grand. Essayez encore.");
-            }
-        }
-    }
+    
+  } else {
+    window.alert("Veuillez saisir une valeur numérique valide.");
+  }
 }
 
+// Calcul du nombre de valeurs saisies
+var nbValeurs = valeurs.length;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function message ()
-{
-    alert("Natifs");
+// Calcul de la somme
+var somme = 0;
+for (var i = 0; i < nbValeurs; i++) {
+  somme += valeurs[i];
 }
+
+// Calcul de la moyenne
+var moyenne = somme / nbValeurs;
+
+// Affichage des résultats
+window.alert("Nombre de valeurs saisies : " + nbValeurs);
+window.alert("Somme des valeurs : " + somme);
+window.alert("Moyenne des valeurs : " + moyenne);
