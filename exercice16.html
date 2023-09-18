@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 16</title>
+    <link rel="icon" href="assets/img/Unofficial_JavaScript_logo_2.svg.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav>
+        <ul class="nav">
+            <li><a class="nav-item" href="index.html"> Accueil </a></li>
+        </ul>
+    </nav>
+    <h1>Les formulaires</h1>
+
+    <!-- <form action="" id="form1" onsubmit="return checkForm(this);">
+        <input type="text" name="nom" value="Dupont">
+        <input type="text" name="prenom" value="Eric">
+        <input type="submit" id="idSubForm1" name="subForm1" value="Connection">
+    
+    </form> -->
+
+            <!-- <fieldset class="form1">
+                <h3>Vos Coordonnées :</h3>
+                <h4><b>* </b>Ces zones sont obligatoires pour envoyer le formulaire.</h4>
+                    <label for="societe" class="formu" >Société : </label><input required type="text" name="societe" id="societe" class="formu"><b> * </b>
+                <br>
+                    <label for="nom" class="formu">Personne à contacter : </label><input required type="text" name="nom" id="nom" class="formu"><b> * </b>
+                <br>
+                    
+                    <label for="adresse" class="formu">Adresse de l'entreprise : </label><input type="text" name="adresse" id="adresse" class="formu">  
+                <br>
+                    <label for="cp" class="formu">Code postal : </label><input required type="number" name="cp" id="cp" class="formu"><b> * </b>
+                <br> 
+                    <label for="ville" class="formu">Ville : </label><input type="text" name="ville" id="ville" class="formu"><b> * </b>
+                <br>
+                    <label for="email" class="formu">Email : </label><input required type="email" name="email" id="email" placeholder="dave.loper@afpa.fr" class="formu" ><b> * </b>
+                <br> -->
+                <h1>Contactez-nous</h1>
+            <fieldset class="form1">
+        <form id="contactForm" method="post" onsubmit="return validateForm()">
+            <h3>Vos Coordonnées :</h3>
+                    <label for="societe">Société : </label>
+                    <input type="text" id="societe" name="societe" required><b> *</b><br>
+            
+                    <label for="personne">Personne à contacter : </label>
+                    <input type="text" id="personne" name="personne" required><b> *</b><br>
+            
+                    <label for="codePostal">Code postal : </label>
+                    <input type="text" id="codePostal" name="codePostal" pattern="[0-9]{5}" required><b> *</b><br>
+            
+                    <label for="ville">Ville : </label>
+                    <input type="text" id="ville" name="ville" required><b> *</b><br>
+            
+                    <label for="email">Email : </label>
+                    <input type="email" id="email" name="email" required><b> *</b><br>
+            
+
+                    <label for="tel" class="formu">Téléphone : </label><input type="number" name="tel" id="tel" class="formu">
+                <br>
+                    <label for="projet" class="formu">Sélectionnez l'environnement technique du projet :</label>
+                    <select id="demande" class="formu" name="sujet" required> 
+                        <option value="" selected disabled>Choisissez</option>
+                        <option value="Access" id="Access">Access</option>
+                        <option value="Java" id="Java">Java</option>
+                        <option value="Delphi" id="Delphi">Delphi</option>
+                        <option value="Windex" id="Windex">Windex</option>
+                        <option value="Visual Basic" id="Visual Basic">Visual Basic</option>
+                        <option value="Power Builder" id="Power Builder">Power Builder</option>
+                        <option value="Internet" id="Internet">Internet</option>
+                        <option value="Intranet" id="Intranet">Intranet</option>
+                        <option value="Windows NT" id="Windows NT">Windows NT</option>
+                        <option value="Unix" id="Unix">Unix</option>
+                        <option value="SQL Server" id="SQL Server">SQL Server</option>
+                        <option value="Oracle" id="Oracle">Oracle</option>
+                        <option value="autres" id="autre">Autres..</option>
+                    </select>
+                <br>    
+                    <input type="submit">
+                    <input type="reset" value="Effacer">
+            </fieldset>
+        </form>
