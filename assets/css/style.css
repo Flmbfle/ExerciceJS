@@ -89,3 +89,14 @@ label {
  span {
     align-items: center;
  }
+ .formu {
+    max-width: 50%;
+    width: 100%;
+ }
+
+.test {
+    width: 10%;
+}
+textarea , select {
+    border-radius: 10px;
+}

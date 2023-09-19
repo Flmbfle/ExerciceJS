@@ -13,59 +13,33 @@
             <li><a class="nav-item" href="index.html"> Accueil </a></li>
         </ul>
     </nav>
-    <h1>Les formulaires</h1>
-
-    <!-- <form action="" id="form1" onsubmit="return checkForm(this);">
-        <input type="text" name="nom" value="Dupont">
-        <input type="text" name="prenom" value="Eric">
-        <input type="submit" id="idSubForm1" name="subForm1" value="Connection">
-    
-    </form> -->
-
-            <!-- <fieldset class="form1">
-                <h3>Vos Coordonnées :</h3>
-                <h4><b>* </b>Ces zones sont obligatoires pour envoyer le formulaire.</h4>
-                    <label for="societe" class="formu" >Société : </label><input required type="text" name="societe" id="societe" class="formu"><b> * </b>
-                <br>
-                    <label for="nom" class="formu">Personne à contacter : </label><input required type="text" name="nom" id="nom" class="formu"><b> * </b>
-                <br>
-                    
-                    <label for="adresse" class="formu">Adresse de l'entreprise : </label><input type="text" name="adresse" id="adresse" class="formu">  
-                <br>
-                    <label for="cp" class="formu">Code postal : </label><input required type="number" name="cp" id="cp" class="formu"><b> * </b>
-                <br> 
-                    <label for="ville" class="formu">Ville : </label><input type="text" name="ville" id="ville" class="formu"><b> * </b>
-                <br>
-                    <label for="email" class="formu">Email : </label><input required type="email" name="email" id="email" placeholder="dave.loper@afpa.fr" class="formu" ><b> * </b>
-                <br> -->
-                <h1>Contactez-nous</h1>
-            <fieldset class="form1">
-                <form id="contactForm" method="post" novalidate>
-                    <label for="societe">Société:</label>
-                    <input type="text" id="societe" name="societe" required>
-                    <br><span id="societeError" class="error"></span><br>
+    <h1>Les formulaires :</h1>
+        <fieldset class="form1">
+            <form id="contactForm" method="post" novalidate>
+                <label for="societe">Société:</label>
+                <input type="text" id="societe" name="societe" required>
+            <br><span id="societeError" class="error"></span><br>
             
-                    <label for="personne">Personne à contacter:</label>
-                    <input type="text" id="personne" name="personne" required>
-                    <br><span id="personneError" class="error"></span><br>
+                <label for="personne">Personne à contacter:</label>
+                <input type="text" id="personne" name="personne" required>
+            <br><span id="personneError" class="error"></span><br>
             
-                    <label for="codePostal">Code postal:</label>
-                    <input type="text" id="codePostal" name="codePostal" pattern="[0-9]{5}" required>
-                    <br><span id="codePostalError" class="error"></span><br>
+                <label for="codePostal">Code postal:</label>
+                <input type="text" id="codePostal" name="codePostal" pattern="[0-9]{5}" required>
+            <br><span id="codePostalError" class="error"></span><br>
             
-                    <label for="ville">Ville:</label>
-                    <input type="text" id="ville" name="ville" required>
-                    <br><span id="villeError" class="error"></span><br>
+                <label for="ville">Ville:</label>
+                <input type="text" id="ville" name="ville" required>
+            <br><span id="villeError" class="error"></span><br>
             
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    <br><span id="emailError" class="error"></span><br>          
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            <br><span id="emailError" class="error"></span><br>          
             
-                    <label for="tel" class="formu">Téléphone : </label> 
-                    <input type="tel" name="tel" id="tel"><br>
-                <br>
-                    <label for="demande" class="formu">Sélectionnez l'environnement technique du projet :</label>
-                    <select id="demande" class="formu" name="sujet"> 
+                <label for="tel">Téléphone : </label><input type="tel" name="tel" id="tel"><br>
+            <br>
+                <label for="demande">Sélectionnez l'environnement technique du projet :</label>
+                    <select id="demande" name="sujet"> 
                         <option value="" selected disabled>Choisissez</option>
                         <option value="Access" id="Access">Access</option>
                         <option value="Java" id="Java">Java</option>
@@ -81,13 +55,13 @@
                         <option value="Oracle" id="Oracle">Oracle</option>
                         <option value="autres" id="autre">Autres..</option>
                     </select>
-                <br>
-                <div CLA>
-                    <input type="submit" id="bouton_envoi">
-                    <input type="reset" value="Effacer">
-                </div>
-            </fieldset>
-        </form>  
+            <br>
+                <textarea class="formu" id="subject" name="subject" placeholder="Informations complémentaire"></textarea>
+            <br>
+                    <input class="test" type="submit" id="bouton_envoi">
+                    <input class="test" type="reset" value="Effacer">
+            </form> 
+        </fieldset> 
         <script src="assets/js/exercice16.js"></script>      
     </body>
 </html>    
