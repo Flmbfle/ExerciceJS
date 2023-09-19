@@ -40,28 +40,32 @@
                 <br> -->
                 <h1>Contactez-nous</h1>
             <fieldset class="form1">
-        <form id="contactForm" method="post" onsubmit="return validateForm()">
-            <h3>Vos Coordonnées :</h3>
-                    <label for="societe">Société : </label>
-                    <input type="text" id="societe" name="societe" required><b> *</b><br>
+                <form id="contactForm" method="post" novalidate>
+                    <label for="societe">Société:</label>
+                    <input type="text" id="societe" name="societe" required>
+                    <br><span id="societeError" class="error"></span><br>
             
-                    <label for="personne">Personne à contacter : </label>
-                    <input type="text" id="personne" name="personne" required><b> *</b><br>
+                    <label for="personne">Personne à contacter:</label>
+                    <input type="text" id="personne" name="personne" required>
+                    <br><span id="personneError" class="error"></span><br>
             
-                    <label for="codePostal">Code postal : </label>
-                    <input type="text" id="codePostal" name="codePostal" pattern="[0-9]{5}" required><b> *</b><br>
+                    <label for="codePostal">Code postal:</label>
+                    <input type="text" id="codePostal" name="codePostal" pattern="[0-9]{5}" required>
+                    <br><span id="codePostalError" class="error"></span><br>
             
-                    <label for="ville">Ville : </label>
-                    <input type="text" id="ville" name="ville" required><b> *</b><br>
+                    <label for="ville">Ville:</label>
+                    <input type="text" id="ville" name="ville" required>
+                    <br><span id="villeError" class="error"></span><br>
             
-                    <label for="email">Email : </label>
-                    <input type="email" id="email" name="email" required><b> *</b><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <br><span id="emailError" class="error"></span><br>          
             
-
-                    <label for="tel" class="formu">Téléphone : </label><input type="number" name="tel" id="tel" class="formu">
+                    <label for="tel" class="formu">Téléphone : </label> 
+                    <input type="tel" name="tel" id="tel"><br>
                 <br>
-                    <label for="projet" class="formu">Sélectionnez l'environnement technique du projet :</label>
-                    <select id="demande" class="formu" name="sujet" required> 
+                    <label for="demande" class="formu">Sélectionnez l'environnement technique du projet :</label>
+                    <select id="demande" class="formu" name="sujet"> 
                         <option value="" selected disabled>Choisissez</option>
                         <option value="Access" id="Access">Access</option>
                         <option value="Java" id="Java">Java</option>
@@ -77,8 +81,13 @@
                         <option value="Oracle" id="Oracle">Oracle</option>
                         <option value="autres" id="autre">Autres..</option>
                     </select>
-                <br>    
-                    <input type="submit">
+                <br>
+                <div CLA>
+                    <input type="submit" id="bouton_envoi">
                     <input type="reset" value="Effacer">
+                </div>
             </fieldset>
-        </form>
+        </form>  
+        <script src="assets/js/exercice16.js"></script>      
+    </body>
+</html>    

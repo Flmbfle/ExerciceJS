@@ -7,6 +7,7 @@ nav {
     color :black;
     font-size: 22px;
     padding:15px;
+    border-radius:8px;
 }
     a:link {
   color: black;
@@ -33,6 +34,7 @@ li {
     border-width:1px;
     border-style:solid; 
     border-color:rgb(0, 0, 0);
+    border-radius:8px;
 }
 
 #Tableau h1 {
@@ -52,3 +54,38 @@ li {
     width: 100%;
     text-align: center;
 }
+fieldset {
+    width: auto;
+    background-color: grey;
+    margin: 1%;
+    padding: 2%;
+    border-radius:8px;
+}
+form {
+    width: 96%;
+    padding: 2%;
+    background: rgb(150,150,150);
+    background: linear-gradient(45deg, rgba(150,150,150,1) 0%, rgba(213,213,213,1) 25%, rgba(255,255,255,1) 75%, rgba(150,150,150,1) 100%);
+    border-radius:8px;
+}
+label {
+    display: inline-block;
+    min-width: 200px;
+    margin: 1%;
+    font-size: 130%;
+}
+ input {
+    display: inline-block;
+    width: 30%;
+    background-color: whitesmoke;
+    border-radius:20px;
+ }
+
+ .error {
+    font-size: small;
+    color: red;
+ }
+
+ span {
+    align-items: center;
+ }
